@@ -4,11 +4,13 @@ import React from "react";
 export const Trafficlight = () => {
 	return (
 		<React.Fragment>
-			<div className="toptrafficlight" />
-			<div className="trafficbase">
-				<div className="redlight" />
-				<div className="yellowlight" />
-				<div className="greenlight" />
+			<div className="page">
+				<div className="toptrafficlight" />
+				<div className="trafficbase">
+					<div className="redlight" />
+					<div className="yellowlight" />
+					<div className="greenlight" />
+				</div>
 			</div>
 		</React.Fragment>
 	);
