@@ -18,26 +18,13 @@ body{
     flex-direction: column;
     padding-top: 20px;
 }
-.redlight{
-    background-color: red;
+.light{
     margin: auto;
     width: 115px;
     height: 120px;
     border-radius: 500px;
-    box-shadow: 5px 10px 25px 35px yellow;
+    &.red {background-color: red;}
+    &.yellow {background-color: orange;}
+    &.green {background-color: green;}
+    &.shadowlight {box-shadow: 5px 10px 25px 35px yellow;}
 }
-.yellowlight{
-    background-color: orange;
-    margin: auto;
-    width: 115px;
-    height: 120px;
-    border-radius: 500px;
-}
-.greenlight{
-    background-color: green;
-    margin: auto;
-    width: 115px;
-    height: 120px;
-    border-radius: 500px;
-}
-

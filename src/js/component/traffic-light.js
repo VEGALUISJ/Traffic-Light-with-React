@@ -1,15 +1,44 @@
 import React from "react";
 
 //create your first component
-export const Trafficlight = () => {
-	return (
-		<React.Fragment>
-			<div className="toptrafficlight" />
-			<div className="trafficbase">
-				<div className="redlight" />
-				<div className="yellowlight" />
-				<div className="greenlight" />
+export class TrafficLight extends React.Component {
+	constructor() {
+		super();
+		this.state = {
+			selectedlight: null
+		};
+	}
+
+	render() {
+		const redShadow = "";
+		if (this.state.selectedlight == "red") redShadow = "shadowlight";
+		const yellowShadow = "";
+		if (this.state.selectedlight == "yellow") yellowShadow = "shadowlight";
+		const greenShadow = "";
+		if (this.state.selectedlight == "green") greenShadow = "shadowlight";
+
+		return (
+			<div>
+				<div className="toptrafficlight" />
+				<div className="trafficbase">
+					<div
+						className={"red light" + redShadow}
+						onClick={() => this.setState({ selectedlight: "red" })}
+					/>
+					<div
+						className={"yellow light" + yellowShadow}
+						onClick={() =>
+							this.setState({ selectedlight: "yellow" })
+						}
+					/>
+					<div
+						className={"green light" + greenShadow}
+						onClick={() =>
+							this.setState({ selectedlight: "green" })
+						}
+					/>
+				</div>
 			</div>
-		</React.Fragment>
-	);
-};
+		);
+	}
+}
