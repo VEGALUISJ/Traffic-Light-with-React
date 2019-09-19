@@ -10,11 +10,11 @@ export class TrafficLight extends React.Component {
 	}
 
 	render() {
-		const redShadow = "";
+		let redShadow = "";
 		if (this.state.selectedlight == "red") redShadow = "shadowlight";
-		const yellowShadow = "";
+		let yellowShadow = "";
 		if (this.state.selectedlight == "yellow") yellowShadow = "shadowlight";
-		const greenShadow = "";
+		let greenShadow = "";
 		if (this.state.selectedlight == "green") greenShadow = "shadowlight";
 
 		return (
@@ -22,17 +22,17 @@ export class TrafficLight extends React.Component {
 				<div className="toptrafficlight" />
 				<div className="trafficbase">
 					<div
-						className={"red light" + redShadow}
+						className={"red light " + redShadow}
 						onClick={() => this.setState({ selectedlight: "red" })}
 					/>
 					<div
-						className={"yellow light" + yellowShadow}
+						className={"yellow light " + yellowShadow}
 						onClick={() =>
 							this.setState({ selectedlight: "yellow" })
 						}
 					/>
 					<div
-						className={"green light" + greenShadow}
+						className={"green light " + greenShadow}
 						onClick={() =>
 							this.setState({ selectedlight: "green" })
 						}
